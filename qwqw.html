@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Slackey&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+	
+
+	<title>Debaprasad</title>
+	<meta  name = "viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		.w3-hover-opacity-off:hover{
+			opacity:1;
+			-ms-transform: scale(1.25);
+			-webkit-transform: scale(1.25);
+			transform: scale(1.25);
+			z-index: 12;
+			filter: grayscale(0);
+		}
+		.w3-opacity{
+			opacity:0.4;
+			z-index:5;
+			filter: grayscale(100);
+		}
+		.ida{
+			width: 100%;
+			position: absolute;
+			top:-30px;
+			bottom: -90px;
+			background: rgb(0,0,0);
+			background: rgba(0,0,0,0.5);
+			color: white;
+			padding-bottom: 0;
+		}
+		.ida2{
+			width: 100%;
+			position: absolute;
+			top:195%;
+			bottom: -90px;
+			background: rgb(0,0,0);
+			background: rgba(0,0,0,0.5);
+			color: white;
+			padding-bottom: 0;
+			margin-bottom: 0;
+			background-size: cover;
+			box-shadow:0px -1px 3px rgba(0,0,0,0.1),
+				0px 2px 6px rgba(0,0,0,0.5);
+				background-color: black;
+		}
+		.ida3{
+			width: 100%;
+			position: absolute;
+			top:343%;
+			color: white;
+			padding-bottom: 0;
+			background-size: cover;
+			margin-top: 0;
+			background-color: black;
+		}
+		.ida4{
+			width: 100%;
+			position: absolute;
+			top:560%;
+			color: white;
+			padding-bottom: 0;
+			background-size: cover;
+			margin-top: 0;
+		}
+		.column {
+		  float: left;
+		  width: 25%;
+		  padding: 0px;
+		}
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+		
+		#mySidenav a {
+  position: absolute;
+  right: -215px;
+  transition: 0.3s;
+  padding: 19px;
+  width: 215px;
+  font-family: calibri;
+  text-decoration: none;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bolder;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centeredx {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+.tm{
+	position: absolute;
+	color: white;
+	top: 136%;
+	transform: translateY(-136%);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 100px;
+	font-family: fantasy;
+	background-color: #20615F;
+	background-size: cover;
+	padding: 10px;
+	padding-bottom: 20px;
+	z-index: 100;
+	cursor: pointer;
+	margin-bottom: 0;
+}
+.hidden{
+	max-width: 0;
+	opacity: 0;
+	transition: 0.5s ease-in;
+
+}
+.tm:hover .hidden{
+	opacity: 1;
+	max-width: 1em;
+}
+#mySidenav a:hover {
+  right: 0;
+}
+
+#about {
+  top: 7%;
+  background-color: #20615F;
+}
+
+#blog {
+  top: 19%;
+  background-color: white;
+}
+
+#projects {
+  top: 33%;
+  background-color: #20615F;
+}
+
+#contact {
+  top: 47%;
+  background-color: white;
+}
+#technicalskills {
+  top: 61%;
+  background-color: #20615F;
+}
+#Behance {
+  top: 75%;
+  background-color: white;
+}
+#acknowledgement {
+  top: 89%;
+  background-color: #20615F;
+}
+#prasad
+{
+	background-color: #20615F;
+}
+#prasad2
+{
+	background-color: #20615F;
+}
+a.nostyle{
+	color:inherit;
+	text-decoration:none;
+	padding:0;
+	margin:0;
+}
+html{
+	scroll-behavior: smooth;
+	max-width: 100%;
+}
+div.portfoliocard{
+	position:relative;
+	height:650px;
+	width:100%;
+	background:rgba(255,255,255,1);
+	border:1px solid rgba(0,0,0,0.7);
+	box-shadow:0px -1px 3px rgba(0,0,0,0.1),
+				0px 2px 6px rgba(0,0,0,0.5);
+	
+	margin:0% auto;
+	overflow:hidden;
+	z-index:100;
+	margin-top: -20px;
+}
+div.portfoliocard div.coverphoto{
+	width:100%;
+	height:250px;
+	background:url('mtn.jpg');
+	background-position:center center;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	box-shadow:inset 0px 3px 20px rgba(255,255,255,0.3),
+				1px 0px 2px rgba(255,255,255,0.7);
+	z-index:99;
+}
+div.portfoliocard div.left_col, div.portfoliocard div.right_col{
+	float:left;
+	height:400px;
+}
+div.portfoliocard div.left_col{
+	width:40%;
+	padding-top:185px;
+	box-sizing:border-box;
+	font-style: italic;
+	font-family: fantasy;
+}
+div.portfoliocard div.right_col{
+	width:60%;
+	background:rgba(245,245,245,1);
+	border-left:1px solid rgba(230,230,230,1);
+	box-shadow:inset 0px 1px 1px rgba(255,255,255,0.7);
+	margin-left:-1px;
+	border-bottom-right-radius:5px;
+	font-style: italic;
+	font-family: fantasy;
+}
+div.portfoliocard div.profile_picture{
+	width:300px;
+	height:300px;
+	background:rgba(255,255,255,1);
+	position:absolute;
+	top:65px;
+	left:40px;
+	border-radius:100%;
+	background-image: url('deba1.jpg');
+	background-size:100% 100%;
+	padding:7px;
+	border:4px solid rgba(255,255,255,1)
+}
+div.portfoliocard div.right_col h2.name{
+	font-size:30px;
+	font-weight:300;
+	color: rgba(30,30,30,1);
+	padding-bottom: 6px;
+	margin:20px 10px 0px 30px;
+	font-style: italic;
+	font-family: fantasy;
+}
+div.portfoliocard div.right_col h3.location{
+	font-size:15px;
+	font-weight:300;
+	color:rgba(170,170,170,1);
+	padding:0;
+	margin:-5px 10px 10px 30px;
+}
+div.portfoliocard ul.contact_information{
+	margin-top:20px;
+	padding-left:30px;
+	list-style-type:none;
+}
+div.portfoliocard ul.contact_information li{
+	height:25px;
+	width:300px;
+	line-height:25px;
+	font-weight:300;
+	font-size:15px;
+	color:rgba(140,140,140,1);
+	text-shadow:1px 1px 1px rgba(255,255,255,0.8);
+	padding:5px 0px;
+	background-repeat:no-repeat;
+	background-size:18px 18px;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	box-shadow:0px 1px 1px rgba(255,255,255,0.6);
+	cursor:default;
+}
+div.portfoliocard ul.contact_information li:before{
+	content:"";
+	width:25px;
+	height:25px;
+	display:block;
+	float:left;
+	background-position:center;
+	background-size:18px 18px;
+	background-repeat:no-repeat;
+	margin-right:5px;
+	opacity:0.7;
+}
+div.portfoliocard ul.contact_information li:hover:before{
+	opacity:1;
+}
+div.portfoliocard ul.contact_information li.work:before{
+	background-image: url('http://schulzmarcel.de/x/icons/case_24.png');
+}
+div.portfoliocard ul.contact_information li.website:before{
+	background-image: url('http://schulzmarcel.de/x/icons/globe_24.png');
+}
+div.portfoliocard ul.contact_information li.mail:before{
+	background-image: url('http://schulzmarcel.de/x/icons/paper_plane_24.png');
+}
+div.portfoliocard ul.contact_information li.phone:before{
+	background-image: url('http://schulzmarcel.de/x/icons/phone_24.png');
+}
+div.portfoliocard ul.contact_information li.resume:before{
+	background-image: url('http://schulzmarcel.de/x/icons/inbox_24.png');
+}
+div.portfoliocard div.followers, div.portfoliocard div.following{
+	margin:15px 0px 0px 35px;
+	font-weight:300;
+	font-size:16px;
+	color:rgba(30,30,30,1);
+}
+div.portfoliocard div.follow_count{
+	font-weight:400;
+	font-size:25px;
+	color:rgba(140,140,140,1);
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  margin-top: -5px;
+  z-index: 50;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: fantasy;
+  font-style: italic;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #20615F;
+  color: white;
+}
+
+	</style>
+
+</head>
+<body style="max-width: 100%;background-repeat: round;margin-left: 0;margin-right: 0;margin-top: 0;margin-bottom: 0; ">
+
+<div class="topnav">
+  <a class="active" href="#hc1">Home</a>
+  <a href="#prsi">Personal info</a>
+  <a href="#ida2">Interests</a>
+  <a href="#ida3">Tech-Skills</a>
+  <a href="#ida4">Artworks</a>
+  <a href="#about">Projects</a>
+  <a href="#about">Behance</a>
+  <a href="#about">Contacts</a>
+  
+</div>
+
+
+<div class="header-content" id="hc1" style="margin-bottom: 0px;">
+		<img src="bg.png" style="width: 100%;">
+<div class="ida">
+			<h1 style="font-size: 1200%;font-family: fantasy;font-style: italic;"><span id="prasad">This</span> is Deba<span id="prasad">prasad</span></h1>
+<div>
+				<h2 style="font-size: 50px;font-family: calibri;left: 10px">I am a <span style="color: black;background-color: white;padding-left: 15px;padding-right: 15px;border-radius: 25px 25px 25px 25px;font-family: 'bangers', cursive;
+">UI/UX DESIGNER</span>  <span style="background-color: #20615F;padding-left: 15px;padding-right: 15px;border-radius: 25px 25px 25px 25px;font-family: 'Slackey', cursive;font-size: 40px">ILLUSTRATOR ARTIST</span> <span style="color: black;background-color: white;padding-left: 15px;padding-right: 15px;border-radius: 25px 25px 25px 25px;font-family: 'bangers', cursive;
+">WEB DESIGNER</span> </h2>
+
+</div>		
+</div>
+<div id="mySidenav" class="sidenav" style = "text-align:left;">
+  <a href="#prsi" id="about">   Personal info</a>
+  <a href="#ida2" id="blog" style="color: black">Interests</a>
+  <a href="#ida3" id="projects">Tech skills</a>
+  <a href="#ida4" id="contact" style="color: black">Artworks</a>
+  <a href="ht.html" target = "outdiv" id="technicalskills">Projects</a>
+  <a href="ht.html" target = "outdiv" id="Behance" style="color: black">Behance</a>
+  <a href="ht.html" target = "outdiv" id="acknowledgement">Contacts</a>
+</div>
+</div>
+
+
+<div class="tm" id="prsi">
+	<span>W</span>
+	<span class="hidden">e</span>
+	<span class="hidden">l</span>
+	<span>c</span>
+	<span class="hidden">o</span>
+	<span class="hidden">m</span>
+	<span class="hidden">e</span>
+</div>
+
+
+<div class="portfoliocard">
+<div class="coverphoto"></div>
+<div class="profile_picture"></div>
+<div class="left_col">
+<div class="followers">
+<div class="follow_count">NIT Agartala</div>
+				B.Tech
+</div>
+<div class="following">
+				<div class="follow_count">Electronics and communication engineering</div>
+				5th Semester
+</div>
+</div>
+<div class="right_col">
+			<h2 class="name">Debaprasad Paul</h2>
+			<h3 class="location">Agartala, Tripura</h3>
+			<ul class="contact_information">
+				<li class="work">Designer , Student , Son , Boyfriend</li>
+				<li class="website"><a class="nostyle" href="#">No website yet</a></li>
+				<li class="mail">debaprasadpaul033@gmail.com</li>
+				<li class="phone">+91 70051 98655</li>
+			</ul>
+</div>
+</div>
+			<div style="box-shadow:0px -1px 3px rgba(0,0,0,0.1),0px 4.5px 10px rgba(0,0,0,0.5);">
+						
+			<div class="ida2" id="ida2">
+						<h1 style="font-size: 1100%;font-family: fantasy;font-style: italic;text-shadow: 2px 2px 3px black;margin-bottom: 1px;background-color: black;padding-top: 25px;"><span id="prasad">Inte</span>rests</h1>
+			<div style="font-size: 32px;background-color: black;padding-top: 21px;padding-bottom: 35px">
+			<div class="int1" style="padding-left: 25%;font-weight: 600;font-style: italic;font-family: fantasy;text-shadow: 2px 2px 3px black;">
+				<h2><span id="prasad2">CRICKET</span></h2>
+			</div>
+			<div class="int1" style="padding-left: 60%;font-weight: 600;font-style: italic;font-family: fantasy;text-shadow: 2px 2px 3px black;">
+				<h2><span id="prasad2">POLI</span>TICS</h2>
+			</div>
+			<div class="int1" style="padding-left: 25%;font-weight: 600;font-style: italic;font-family: fantasy;text-shadow: 2px 2px 3px black;">
+				<h2><span id="prasad2">MEME</span>s</h2>
+			</div>
+			<div class="int1" style="padding-left: 60%;font-weight: 600;font-style: italic;font-family: fantasy;text-shadow: 2px 2px 3px black;">
+				<h2><span id="prasad2">PAINTIN</span>G</h2>
+			</div>
+			<div class="int1" style="padding-left: 25%;font-weight: 600;font-style: italic;font-family: fantasy;text-shadow: 2px 2px 3px black;">
+				<h2><span id="prasad2">GARDE</span>NNING</h2>
+			</div>
+			<div class="int1" style="padding-left: 60%;font-weight: 600;font-style: italic;font-family: fantasy;text-shadow: 2px 2px 3px black;">
+				<h2><span id="prasad2">TRAVELLIN</span>G</h2>
+			</div>
+			<div class="int1" style="padding-left: 25%;font-weight: 600;font-style: italic;font-family: fantasy;text-shadow: 2px 2px 3px black;">
+				<h2><span id="prasad2">GAM</span>ING</h2>
+			</div>
+			</div>
+			</div>
+			</div>
+	<div style="box-shadow:0px -1.5px 3px rgba(0,0,0,0.5),0px 2px 6px rgba(0,0,0,0.5);display: block;">
+	<div class="ida3" id="ida3">
+				<h1 style="font-size: 1100%;font-family: fantasy;font-style: italic;text-shadow: 2px 2px 3px black;margin-bottom: 1px;margin-top: 15px"><span id="prasad">Tech</span> skills</h1>
+				<div style="padding-top: 20px;padding-left: 130px;background-color: black">
+					<div class="row">
+					  <div class="column">
+					    <img src="cp.png" alt="Snow" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="hm.png" alt="Forest" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="cs.png" alt="Mountains" style="width:33%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="php.png" alt="Mountains" style="width:55%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					</div>
+				</div>
+				<div style="padding-left: 145px;font-style: italic;font-family: fantasy;font-weight: 400;text-shadow: .5px .5px 1.5px black;letter-spacing: 1px;font-size: 20px;background-color: black">
+					<div class="row">
+					  <div class="column">
+					    <h2><span id="prasad2">C Programming</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">HTML</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">CSS</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">PHP</span></h2>
+					  </div>
+					</div>
+				</div>
+				<div style="padding-top: 100px;padding-left: 130px;background-color: black">
+					<div class="row">
+					  <div class="column">
+					    <img src="ai.png" alt="Snow" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="xd.svg" alt="Forest" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="figma.png" alt="Mountains" style="width:33%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="aid.png" alt="Mountains" style="width:55%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					</div>
+				</div>
+				<div style="padding-left: 145px;font-style: italic;font-family: fantasy;font-weight: 400;text-shadow: .5px .5px 1.5px black;letter-spacing: 1px;font-size: 20px;background-color: black">
+					<div class="row">
+					  <div class="column">
+					    <h2><span id="prasad2">Adobe illustrator</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">Adobe XD</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">Figma</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">Adobe Draw</span></h2>
+					  </div>
+					</div>
+				</div>
+				<div style="padding-top: 100px;padding-left: 130px;background-color: black">
+					<div class="row">
+					  <div class="column">
+					    <img src="sp.jpg" alt="Snow" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="btsr.png" alt="Forest" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="msx.png" alt="Mountains" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="msw.png" alt="Mountains" style="width:55%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					</div>
+				</div>
+				<div style="padding-left: 145px;font-style: italic;font-family: fantasy;font-weight: 400;text-shadow: .5px .5px 1.5px black;letter-spacing: 1px;font-size: 20px;background-color: black">
+					<div class="row">
+					  <div class="column">
+					    <h2><span id="prasad2">Spark Post</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">Bootstrap</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">MS Excel</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">MS Word</span></h2>
+					  </div>
+					</div>
+				</div>
+				<div style="padding-top: 100px;padding-left: 130px;background-color: black">
+					<div class="row">
+					  <div class="column">
+					    <img src="ps.svg" alt="Snow" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="unity.png" alt="Forest" style="width:55%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="ppt.png" alt="Mountains" style="width:45%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					  <div class="column">
+					    <img src="cdr.png" alt="Mountains" style="width:55%" class="w3-opacity w3-hover-opacity-off">
+					  </div>
+					</div>
+				</div>
+				<div style="padding-left: 145px;padding-bottom: 30px;font-style: italic;font-family: fantasy;font-weight: 400;text-shadow: .5px .5px 1.5px black;letter-spacing: 1px;font-size: 20px;background-color: black">
+					<div class="row">
+					  <div class="column">
+					    <h2><span id="prasad2">Adobe Photoshop</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">Unity</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">Powerpoint</span></h2>
+					  </div>
+					  <div class="column">
+					    <h2><span id="prasad2">CorelDraw</span></h2>
+					  </div>
+					</div>
+				</div>
+				
+	</div>
+	</div>
+	<div style="box-shadow:0px -1.5px 3px rgba(0,0,0,0.5),0px 2px 6px rgba(0,0,0,0.5);display: block;">
+				
+	<div class="ida4" id="ida4">
+		<h1 style="font-size: 1100%;font-family: fantasy;font-style: italic;text-shadow: 2px 2px 3px black;margin-bottom: -10px;margin-top: -10px;padding-bottom: 0px;background-color: black;padding-bottom: 10px"><span id="prasad">Artwo</span>rks</h1>
+		<div class="container" style="padding-bottom: 20px;background-color: black">
+			<hr>
+			<h2 style="font-size: 700%;font-family: fantasy;font-style: italic;text-shadow: 2px 2px 3px black;margin-bottom: 40px;margin-top: 40px;text-align: center;color: yellow;">Vector arts</h2>
+			<hr>
+		</div>
+
+		<div class="row" style="padding-top: 100px;background-color: black;margin: -25px">
+		  <div class="column">
+		  	<a href="#jk1"><img src="jkgl.png" id="clm2" class="w3-opacity w3-hover-opacity-off" alt="Snow" style="width:60%;margin-left: 50px"></a>
+		  </div>
+		  <div class="column">
+		  	<a href="#sa1"><img src="sak.png" id="clm2" class="w3-opacity w3-hover-opacity-off" alt="Snow" style="width:60%;margin-left: 50px"></a>
+		  </div>
+		  <div class="column">
+		  	<a href="#pk1"><img src="pkb2.png" id="clm2" class="w3-opacity w3-hover-opacity-off" alt="Forest" style="width:60%;margin-left: 50px"></a>   
+		  </div>
+		  <div class="column">
+		  	<a href="#sr1"><img src="srk.png" id="clm2" class="w3-opacity w3-hover-opacity-off" alt="Mountains" style="width:60%;margin-left: 50px"></a>
+		  </div>
+
+		</div>
+		<div>
+		<hr>
+		<div class="row" style="padding-top: 100px;background-color: black;margin: -25px">
+		  <div class="column">
+		    <img src="jkgl.png" id="jk1"  alt="Snow" style="width:100%;margin-left: 70px">
+		  </div>
+		  <div class="column">
+		    <h1 style="margin-top: 150px;margin-left: 200px;margin-right: -200px;font-size: 50px">Jake Gyllenhaal</h1>
+		    <p style="margin-left: 200px;margin-right: -200px">Jacob Benjamin Gyllenhaal is an American actor and film producer. Born into the Gyllenhaal family, he is the son of director Stephen Gyllenhaal and screenwriter Naomi Foner. He began acting as a child, making his acting debut in City Slickers, followed by roles in his father's films A Dangerous Woman and Homegrown</p>
+		    <hr id="hr1" style="margin-left: 50px">
+		  </div>
+		</div>
+		<div class="row" style="padding-top: 100px;background-color: black;margin: -25px">
+		<div class="column">
+		    <h1 style="margin-top: 150px;margin-left: 600px;margin-right: -700px;font-size: 50px">Saif Ali Khan</h1>
+		    <p style="margin-left: 600px;margin-right: -600px">Saif Ali Khan is an Indian film actor and producer. The son of actress Sharmila Tagore and cricketer Mansoor Ali Khan Pataudi, Khan made his acting debut in Yash Chopra's unsuccessful drama Parampara, but achieved success with his roles in the romantic drama Yeh Dillagi and the action film Main Khiladi Tu Anari.</p>
+		    <hr id="hr2" style="margin-left: 700px;margin-right: -700px">
+		  </div>
+		  <div class="column">
+		    <img src="sak.png" id="sa1"  alt="Snow" style="width:100%;margin-left: 680px">
+		  </div>
+		</div>
+		<div class="row" style="padding-top: 100px;background-color: black;margin: -25px">
+		  <div class="column">
+		    <img src="pkb2.png" id="pk1"  alt="Snow" style="width:100%;margin-left: 70px">
+		  </div>
+		  <div class="column">
+		    <h1 style="margin-top: 150px;margin-left: 200px;margin-right: -200px;font-size: 50px">Cillian Murphy</h1>
+		    <p style="margin-left: 200px;margin-right: -200px">Cillian Murphy is an Irish actor. He began his career performing as a rock musician. After turning down a record deal, he began his acting career in theatre, and in short and independent films in the late 1990s.</p>
+		    <hr id="hr1" style="margin-left: 100px;margin-right: -100px">
+		  </div>
+		</div>
+		<div class="row" style="padding-top: 100px;background-color: black;margin: -25px">
+		<div class="column">
+		    <h1 style="margin-top: 150px;margin-left: 600px;margin-right: -700px;font-size: 50px"><span id="prasad2"></span>Shah Rukh Khan</h1>
+		    <p style="margin-left: 600px;margin-right: -600px">Shah Rukh Khan, also known by the initialism SRK, is an Indian actor, film producer, and television personality. Referred to in the media as the "Badshah of Bollywood", "King of Bollywood" and "King Khan", he has appeared in more than 80 Bollywood films, and earned numerous accolades, including 14 Filmfare Awards.</p>
+		    <hr id="hr2" style="margin-left: 700px;margin-right: -700px">
+		  </div>
+		  <div class="column">
+		    <img src="srk.png" id="sr1"  alt="Snow" style="width:100%;margin-left: 680px">
+		  </div>
+		</div>
+		</div>
+		<div class="container">
+		  <img src="bhnc.png" alt="Snow" style="width:100%;filter: blur(9px);">
+		  <a href="https://www.behance.net/debaprasadpaul">
+		  	<div class="centeredx">
+		  		<img src="bnc.png" style="width: 100%">
+		  	</div>
+		  	<div class="centered" style="color: white;font-size: 25px;background-color: #20615F;padding: 10px 25px;border-radius: 50px;font-family: fantasy;font-style: italic;box-shadow: 0px -1px 3px rgba(0,0,0,1),
+				0px 2px 6px rgba(0,0,0,1);">
+			Visit my Behance
+			</div>
+		</a>
+		  
+		</div>
+
+		</div>
+
+	</div>
+	</div>
+
+	
+	
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</div>
+
+</body>
+</html>
